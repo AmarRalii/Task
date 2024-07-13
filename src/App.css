@@ -1,38 +1,123 @@
 .App {
   text-align: center;
+  min-height: 200vh;
+  background-color: #efe3d8 ;
+  padding: 0;
+  margin: 0;
+}
+.navbar{
+  background-color: #efe3d8 !important;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: #F8F3EE;
+  border-radius: 3%;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+th,
+td {
+  border-bottom: 1px solid #090A12 !important;
+  
+  padding: 8px;
+  color: #090A12;
+}
+.name{
+  width: 20%;
+  border: none !important;
+}
+.tran{
+  width: 80%;
+  border: none !important;
+}
+th {
+  background-color: #D3AE8E80;
+  color: #090A12;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+td img{
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  margin-right: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.name-img{
+  border-right: 1px solid #090A12 !important;
+  text-align: start;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  margin-bottom: 20px;
+  padding: 8px;
+  width: 200px;
+ 
 }
+
+.form {
+  --width-of-input: 80%;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: #1b924d;
+  --input-hovered-color: #7ca3df1f;
+  position: relative;
+  width: var(--width-of-input);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* styling of Input */
+.input {
+  color: #000000;
+  font-size: 0.9rem;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+}
+/* styling of animated border */
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.6s;
+}
+/* Hover on Input */
+input:hover {
+  background: var(--input-hovered-color);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+input:focus ~ .input-border {
+  width: 100%;
+}
+/* === if you want to do animated border on typing === */
+/* remove input:focus code and uncomment below code */
+/* input:valid ~ .input-border{
+   width: 100%;
+ } */
+
+ .chart{
+  background-color: rgb(255, 255, 255);
+  border-radius: 3% 3% 0 0;
+  margin-bottom: 50px;
+ }
+ .chart img{
+  width: 100%;
+  height: 100%;
+ }
