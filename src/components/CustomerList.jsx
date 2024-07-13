@@ -1,10 +1,9 @@
-// src/components/Customer/CustomerList.jsx
 import React, { useEffect, useState } from "react";
+import Chart from "./Chart";
+import img from '../assets/088cc0362366334efb57c50c474420cd.jpeg'
+import chartImg from '../assets/Screenshot 2024-07-13 143343.png'
+import { getCustomers, getTransactions } from '../api';
 
-import Chart from "../Chart/Chart";
-import img from '../../assets/088cc0362366334efb57c50c474420cd.jpeg'
-import chartImg from '../../assets/Screenshot 2024-07-13 143343.png'
-import { getCustomers , getTransactions} from '../../api';
 const CustomerList = () => {
   const [customers, setCustomers] = useState([]);
   const [transactions, setTransactions] = useState([]);
@@ -36,18 +35,21 @@ const CustomerList = () => {
     return customerMatch || amountMatch;
   });
 
+
+  console.log(customers);
+
   return (
     <div className="container customer">
-      <div class="form">
+      <div className="form">
         <input
-          class="input"
+          className="input"
           placeholder="Type your text"
           required=""
           type="text"
           value={filter}
           onChange={handleFilterChange}
         />
-        <span class="input-border"></span>
+        <span className="input-border"></span>
       </div>
 
       <table>
